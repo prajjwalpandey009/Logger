@@ -15,7 +15,7 @@ public class Controller {
   private static final Logger LOGGER = LoggerFactory.getLogger(Controller.class);
 
   @GetMapping("/get/employee")
-  public void logEmployeeDetails() throws JsonProcessingException {
+  public Employee logEmployeeDetails() throws JsonProcessingException {
     Employee employee = new Employee();
     employee.setId("1");
     employee.setName("Prajjwal");
@@ -23,9 +23,9 @@ public class Controller {
     departMent.setDepartMentName("TTN");
     departMent.setDepartMentType("CSE");
     employee.setDepartMent(departMent);
-
     ObjectMapper objectMapper = new ObjectMapper();
     objectMapper.setAnnotationIntrospector(new ExclusionAnnotationIntrospector());
     LOGGER.info(objectMapper.writeValueAsString(employee));
+    return employee;
   }
 }
