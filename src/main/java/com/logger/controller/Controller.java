@@ -18,7 +18,7 @@ public class Controller {
   public Employee logEmployeeDetails() throws JsonProcessingException {
     Employee employee = new Employee();
     employee.setId("1");
-    employee.setName("prajjwal");
+    employee.setName("priya TTN");
     DepartMent departMent = new DepartMent();
     departMent.setDepartMentName("TTN");
     departMent.setDepartMentType("CSE");
